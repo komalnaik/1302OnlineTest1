@@ -29,11 +29,11 @@ public class Elevetor {
 	}
 	
 	public void move(int req_floor){
-		while(req_floor<currentFloor.getFloor_number() && currentFloor.getFloor_number()>0){
+		while(req_floor<=currentFloor.getFloor_number() && currentFloor.getFloor_number()>0){
 				goDown();
 		}
 		
-		while(req_floor>currentFloor.getFloor_number() && currentFloor.getFloor_number()<Floor_list.size()){
+		while(req_floor>=currentFloor.getFloor_number() && currentFloor.getFloor_number()<Floor_list.size()){
 			goUp();
 		}
 		setDoorOpen(true);
@@ -57,7 +57,7 @@ public class Elevetor {
 		while(move_to>currentFloor.getFloor_number()){
 			goUp();
 		}
-		System.out.println("Elevetor is at floor no "+move_to+"Door Opened");
+		System.out.println("Elevetor is at floor no "+move_to+" .\n Door Opened");
 	}
 	
 	
